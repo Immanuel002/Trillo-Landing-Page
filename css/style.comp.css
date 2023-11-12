@@ -275,9 +275,34 @@ body {
 
 .gallery {
   display: flex; }
+  .gallery__item {
+    position: relative;
+    max-width: 600px;
+    overflow: hidden; }
   .gallery__photo {
     width: 100%;
-    display: block; }
+    display: block;
+    transition: transform 0.3s ease; }
+
+.gallery__item:hover img {
+  transform: scale(1.1); }
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-grey-dark-2);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease; }
+
+.gallery__item:hover figcaption {
+  opacity: 1; }
 
 .overview {
   display: flex;
